@@ -2,6 +2,8 @@ require 'open-uri'
 require 'nokogiri'
 
 class StartScrap
+  attr_accessor :crypto
+
   def initialize
     @crypto = {}
   end
