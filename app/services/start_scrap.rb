@@ -20,7 +20,12 @@ class StartScrap
     p '-' * 20 + 'stockage dans le hash réussis' + '-' * 20
   end
 
-  def save
-
+  def self.save
+    p '-' * 20 + 'stockage dans la db' + '-' * 20
+    @crypto.each do |key, value|
+      crypto_save = Crypto.create(name: key, value: value)
+      p crypto_save
+    end
+    p '-' * 20 + 'stockage dans la db réussis' + '-' * 20
   end
 end
