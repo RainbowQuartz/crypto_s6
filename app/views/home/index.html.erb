@@ -1,6 +1,26 @@
 
 <h1>Selectionnez une cryptomonnaie</h1>
+<!--
 <% @crypto.each do |crypt|%>
   <%= crypt.name %>
   <%= crypt.value %>
+<% end %>
+-->
+<table >
+<tr>
+  <th>Name</th>
+  <th>Value</th>
+
+
+</tr>
+</table>
+<% @crypto.each do |crypto| %>
+<table >
+  <tr>
+    <td><%= crypto.name %></td>
+    <td><%= crypto.value %></td>
+
+  </tr>
+
+</table>
 <% end %>
