@@ -21,6 +21,8 @@ class StartScrap
   end
 
   def self.save
+    p '-' * 20 + 'wiping de la db' + '-' * 20
+    Crypto.destroy_all
     p '-' * 20 + 'stockage dans la db' + '-' * 20
     @crypto.each do |key, value|
       crypto_save = Crypto.create(name: key, value: value)
